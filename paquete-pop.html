@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paquete Pop - JellyPop</title>
+    <link rel="stylesheet" href="paquete-pop.css">
+</head>
+<body>
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<section class="container">
+
+  <!-- IZQUIERDA -->
+  <div class="left">
+
+    <h1>🔥 🚀 PAQUETE POP 🔥</h1>
+
+    <div class="main-content">
+
+      <!-- VIDEOS -->
+      <div class="videos">
+
+        <video autoplay muted loop playsinline>
+          <source src="PPcarp/Más que café, una experiencia que despierta tus sentidos. ☕🧇❤️Ven y descubre tu nuevo lugar fav.mp4" type="video/mp4">
+        </video>
+
+        <video autoplay muted loop playsinline>
+          <source src="PPcarp/Si eres fan de las fresas con crema, TIENES que conocer este increíble lugar @freseate.ixt🍦🍓Ub.mp4" type="video/mp4">
+        </video>
+
+      </div>
+
+      <!-- TEXTO -->
+      <div class="info">
+
+        <p>
+          El combo perfecto para que tu marca se vea increíble
+          y conecte con más clientes.
+        </p>
+
+        <h3>Incluye:</h3>
+
+        <ul>
+          <li>📸 13 fotografías digitales de alta calidad</li>
+          <li>🎞️ 5 fotografías editadas profesionalmente</li>
+          <li>📱 1 reel dinámico para redes sociales</li>
+          <li>🎥 1 video de 1 minuto o 2 segundos ideal para promoción</li>
+          <li>✨ 1 flyer con diseño incluido</li>
+          <li>🖨️ Entrega en formato listo para impresión</li>
+        </ul>
+
+        <p class="extra">
+          Ideal para negocios, emprendedores y marcas
+          que buscan destacar con contenido profesional y versátil.
+        </p>
+
+        <div class="price">
+          $1,150 💵🟩
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- DERECHA -->
+  <div class="gallery-section">
+
+    <button class="gallery-btn up" onclick="moveGallery(-1)">
+      ▲
+    </button>
+
+    <div class="gallery-wrapper">
+
+      <div class="gallery" id="gallery">
+
+        <img src="PPcarp/Copia de _storage_emulated_0_Pictures_Gallery_owner_ODIN FEST FOTOS_IMG_20260318_235847 (1).jpg" alt="">
+        <img src="PPcarp/Copia de beneficios masaje-02.jpg" alt="">
+        <img src="PPcarp/Copia de bobba_1.jpg" alt="">
+        <img src="PPcarp/Copia de carrusel pestañas_2-06 (2).jpg" alt="">
+        <img src="PPcarp/Copia de conocenos_2 (2).jpg" alt="">
+        <img src="PPcarp/Copia de PSX_20260124_000617_edit_699458670930675.jpg" alt="">
+        <img src="PPcarp/Copia de PSX_20260215_004939_edit_225100489879024.jpg" alt="">
+
+      </div>
+
+    </div>
+
+    <button class="gallery-btn down" onclick="moveGallery(1)">
+      ▼
+    </button>
+
+    <div class="reserve">
+      DESLIZA
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+
+const gallery = document.getElementById("gallery");
+
+let currentPosition = 0;
+
+function moveGallery(direction){
+
+  const moveAmount = 160;
+
+  currentPosition += direction * moveAmount;
+
+  const maxScroll = -(gallery.scrollHeight - 620);
+
+  if(currentPosition > 0){
+    currentPosition = 0;
+  }
+
+  if(currentPosition < maxScroll){
+    currentPosition = maxScroll;
+  }
+
+  gallery.style.transform = `translateY(${currentPosition}px)`;
+}
+
+</script>
+
+</body>
+</html>
