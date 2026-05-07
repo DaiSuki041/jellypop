@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paquete Despegue - JellyPop</title>
+    <link rel="stylesheet" href="paquete-despegue.css">
+</head>
+<body>
+
+    <main class="card-container">
+        <!-- Columna Izquierda: Galería Vertical -->
+        <section class="gallery-column">
+            <div class="logo-container">
+                <img src="img/Logo.png" alt="JellyPop Logo" class="logo">
+            </div>
+            
+            <div class="slider-wrapper">
+                <button class="nav-btn up" onclick="scrollGallery(-100)">▲</button>
+                <div class="image-track" id="imageTrack">
+                    <img src="PDcarp/Copia de Guitarrista_violinista (1).jpg" alt="Evento 1">
+                    <img src="PDcarp/Copia de 3_conxuro (1).jpg" alt="Evento 2">
+                    <img src="PDcarp/Copia de 4 (1).png" alt="Evento 3">
+                    <img src="PDcarp/Copia de IMG_21.png" alt="Evento 4">
+                    <img src="PDcarp/Copia de IMG_0100 (1).jpg" alt="Evento 5">
+                </div>
+                <button class="nav-btn down" onclick="scrollGallery(100)">▼</button>
+                <div class="scroll-tag">DESLIZA</div>
+            </div>
+        </section>
+
+        <!-- Columna Central: Información del Paquete -->
+        <section class="info-column">
+            <header>
+                <h1>🚀 PAQUETE DESPEGUE 🛫</h1>
+                <p class="tagline">¡Haz que tu marca vuele alto y destaque en redes sociales!</p>
+            </header>
+
+            <ul class="features-list">
+                <li>📸 8 fotografías digitales de alta calidad</li>
+                <li>✨ 4 fotografías editadas profesionalmente</li>
+                <li>🎬 1 reel promocional ideal para Instagram, Facebook o TikTok</li>
+                <li>🎥 Extra: video tipo historia para enganchar a tu audiencia</li>
+            </ul>
+
+            <p class="description">
+                Perfecto para emprendedores, negocios y marcas que quieren una imagen profesional y atraer más clientes desde el primer vistazo.
+            </p>
+
+            <div class="price-tag">
+                $700 💵
+            </div>
+        </section>
+
+        <!-- Columna Derecha: Video -->
+        <section class="video-column">
+            <div class="video-placeholder">
+                <!-- Aquí puedes insertar tu <video> o un iframe de YouTube -->
+                <video autoplay muted loop playsinline>
+          <source src="videos/video 1.mp4" type="video/mp4">
+        </video>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function scrollGallery(amount) {
+            const track = document.getElementById('imageTrack');
+            track.scrollBy({ top: amount, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

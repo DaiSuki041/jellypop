@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paquete BOOM - JellyPop</title>
+    <link rel="stylesheet" href="paquete-boom.css">
+</head>
+<body>
+
+    <main class="card-container">
+        <!-- Columna Izquierda: Galería Vertical -->
+        <section class="gallery-column">
+            <div class="logo-container">
+                <img src="img/Logo.png" alt="JellyPop Logo" class="logo">
+            </div>
+            
+            <div class="slider-wrapper">
+                <button class="nav-btn up" onclick="scrollGallery(-100)">▲</button>
+                <div class="image-track" id="imageTrack">
+                    <img src="PBcarp/Copia de IMG_0261.jpg" alt="Evento 1">
+                    <img src="PBcarp/Copia de IMG_0146 (1).jpg" alt="Evento 2">
+                    <img src="PBcarp/Copia de FRESAS-04 (3).jpg" alt="Evento 3">
+                    <img src="PBcarp/Copia de dulce tentatcion-03 (2).jpg" alt="Evento 4">
+                    <img src="PBcarp/Copia de IMG_0203 (1).jpg" alt="Evento 5">
+                </div>
+                <button class="nav-btn down" onclick="scrollGallery(100)">▼</button>
+                <div class="scroll-tag">DESLIZA</div>
+            </div>
+        </section>
+
+        <!-- Columna Central: Información del Paquete -->
+        <section class="info-column">
+            <header>
+                <h1>🚀💥 PAQUETE BOOM 💥</h1>
+                <p class="tagline">Impacta, conecta y haz que tu marca explote en redes sociales.</p>
+            </header>
+
+            <ul class="features-list"> 
+
+                <li>📸 20 fotografías digitales de alta calidad</li>
+                <li>✨ 8 fotografías editadas profesionalmente</li>
+                <li>🎬 2 reels ideales para redes sociales🎥 2 videos de 1 min o 4 de 30seg</li>
+                <li>🖨️ 2 flyers</li>
+                <li>(Entrega en formato listo para impresión, diseño incluido)</li>
+            </ul>
+
+            <p class="description">
+                Perfecto para marcas y negocios que buscan máxima visibilidad y contenido potente para atraer más clientes.
+            </p>
+
+            <div class="price-tag">
+                $1,850 💵
+            </div>
+        </section>
+
+        <!-- Columna Derecha: Video -->
+        <section class="video-column">
+            <div class="video-placeholder">
+                <!-- Aquí puedes insertar tu <video> o un iframe de YouTube -->
+                <video autoplay muted loop playsinline>
+          <source src="PBcarp/En nuestra recomendación de hoy, les traemos a @saymex_grupoheladero 🍦Sin duda un lugar increíb.mp4" type="video/mp4">
+        </video>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function scrollGallery(amount) {
+            const track = document.getElementById('imageTrack');
+            track.scrollBy({ top: amount, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background-image: url('Trescarp/textura5.png'); 
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* CONTENEDOR */
+
+.container{
+    width:1200px;
+    min-height:680px;
+    border-radius:25px;
+    padding:30px;
+    display:flex;
+    gap:40px;
+    overflow:hidden;
+    position:relative;
+}
+
+/* BRILLOS */
+
+.container::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+    radial-gradient(white 1px, transparent 1px);
+    background-size:25px 25px;
+    opacity:.5;
+    pointer-events:none;
+}
+
+/* GALERIA */
+
+.gallery{
+    width:45%;
+    position:relative;
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    align-content:flex-start;
+}
+
+/* CARDS */
+
+.card{
+    position:relative;
+    overflow:hidden;
+    border-radius:10px;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+/* TAMAÑOS */
+
+.big{
+    width:100%;
+    height:330px;
+}
+
+.small{
+    width:160px;
+    height:160px;
+}
+
+.horizontal{
+    width:320px;
+    height:220px;
+}
+
+/* IMAGENES */
+
+.card img{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s ease;
+}
+
+/* HOVER */
+
+.hover-img{
+    opacity:0;
+}
+
+.card:hover .hover-img{
+    opacity:1;
+}
+
+.card:hover .main-img{
+    opacity:0;
+    transform:scale(1.05);
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+/* CONTENIDO */
+
+.content{
+    flex:1;
+    position:relative;
+    z-index:2;
+    color:#111;
+}
+
+.content h1{
+    font-family:'Anton', sans-serif;
+    font-size:52px;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.content h2{
+    font-size:44px;
+    font-weight:500;
+    margin-bottom:20px;
+}
+
+.subtitle{
+    font-size:20px;
+    margin-bottom:18px;
+}
+
+.list p{
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.list ul{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-bottom:22px;
+}
+
+.list li{
+    font-size:20px;
+}
+
+.text{
+    font-size:20px;
+    line-height:1.6;
+    margin-bottom:14px;
+}
+
+.important{
+    font-size:21px;
+    font-weight:600;
+    line-height:1.7;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+    .container{
+        flex-direction:column;
+    }
+
+    .gallery{
+        width:100%;
+    }
+
+    .content h1{
+        font-size:38px;
+    }
+
+    .content h2{
+        font-size:30px;
+    }
+
+    .list li,
+    .text,
+    .important{
+        font-size:17px;
+    }
+}
